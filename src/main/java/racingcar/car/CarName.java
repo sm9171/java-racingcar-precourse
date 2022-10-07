@@ -1,4 +1,4 @@
-package racingcar.domain;
+package racingcar.car;
 
 import racingcar.exception.Message;
 

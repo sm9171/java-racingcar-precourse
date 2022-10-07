@@ -1,7 +1,7 @@
 package racingcar.exception;
 
-import racingcar.domain.CarName;
-import racingcar.domain.CarNames;
+import racingcar.car.CarName;
+import racingcar.car.CarNames;
 
 public class Message {
 	public static String ofNameLength() {
