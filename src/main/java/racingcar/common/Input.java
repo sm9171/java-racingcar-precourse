@@ -1,6 +1,7 @@
 package racingcar.common;
 
 import camp.nextstep.edu.missionutils.Console;
+import racingcar.exception.Message;
 
 public class Input {
 
@@ -18,7 +19,7 @@ public class Input {
 		try {
 			return Integer.parseInt(this.input);
 		} catch (NumberFormatException e) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException(Message.ofParseInt());
 		}
 	}
 

@@ -12,10 +12,13 @@ public class Message {
 		return Type.NAMES_SYNTAX.message();
 	}
 
+	public static String ofParseInt() {
+		return Type.PARSE_INT.message();
+	}
+
 	enum Type {
 
 		NAME_LENGTH {
-
 			@Override
 			protected String message() {
 				return String.format(
@@ -25,12 +28,18 @@ public class Message {
 
 		},
 		NAMES_SYNTAX {
-
 			@Override
 			protected String message() {
 				return String.format(
 						MESSAGE_PREFIX + "자동차 이름은 %s로 구분해주세요.",
 						CarNames.SPLIT_REGEX);
+			}
+
+		},
+		PARSE_INT {
+			@Override
+			protected String message() {
+				return MESSAGE_PREFIX + "숫자만 입력해주세요.";
 			}
 
 		};
